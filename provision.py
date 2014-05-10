@@ -31,6 +31,7 @@ def config_httpd():
     sudo('chkconfig httpd on')
 
 def link_www_dir():
+    sudo('rm -rf /var/www/html')
     sudo('ln -fs /vagrant /var/www/html')
 
 def epel():
